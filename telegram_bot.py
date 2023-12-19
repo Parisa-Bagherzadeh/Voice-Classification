@@ -8,7 +8,7 @@ import librosa
 from tensorflow.keras.models import load_model
 
 
-bot = telebot.TeleBot("6759479250:AAFeanau_rbEx0nfatlAo9yvMrVDn0n_L0g")
+bot = telebot.TeleBot("")
 @bot.message_handler(commands = ['start'])
 def send_welcome(message):
     bot.reply_to(message, 'Hello and Welcome!😊\n Send me a voice please!')
