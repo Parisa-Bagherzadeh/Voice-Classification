@@ -23,7 +23,7 @@ def test(model, wav_file):
     prediction = model.predict(input_data)
     label = np.argmax(prediction)
 
-    labels = os.listdir('dataset_voice')
+    labels = os.listdir('dataset')
     pred = labels[label]
 
     print(pred + "😍")
