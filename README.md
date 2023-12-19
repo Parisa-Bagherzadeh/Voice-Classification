@@ -30,7 +30,7 @@ To use these components, simply run the corresponding Python scripts with your i
 
 You can download the dataset I've gathered and preprocessed from [this](https://drive.google.com/drive/folders/1nbrJos4slMo8-EQMZHru00bu2JPL-gs5?usp=sharing) link or you can use your own data to train the model. 
 ### Preprocess  
-You must put your data (voice) in raw_data folder and  run the following command 
+Put your data in raw_data folder and  run the following command 
 
 ```
 python preprocess.py --raw_data_path raw_data --min_silence_len YOUR_ARGUMENT --silence_thresh YOUR_ARGUMENT --chunk_duration YOUR_ARGUMENT   
