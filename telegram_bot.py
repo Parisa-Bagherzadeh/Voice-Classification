@@ -62,7 +62,7 @@ def voice_processing(message):
       with open(wav_filename, 'wb') as audio:
           audio.write(file)
 
-      waveform, _ = librosa.load(wav_filename, sr=None)  # Change filepath to wav_filename
+      waveform, _ = librosa.load(wav_filename, sr=None)  
       desired_length = 48000
       resized_waveform = librosa.util.fix_length(waveform, size=desired_length)
 
