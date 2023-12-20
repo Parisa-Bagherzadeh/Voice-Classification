@@ -42,7 +42,7 @@ To train the model on your own data, run Voice_Classification.ipynb notebook to 
 ### Evaluation  
 To test the model run the following command:  
 ```
-python inference.py
+python inference.py --model .h5 file --wav_file Test wav file
 ```  
 ## Contributing
 If you would like to contribute to this repository, feel free to submit a pull request with your changes. We welcome contributions from the community and are open to new ideas and improvements.
