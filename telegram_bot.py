@@ -13,6 +13,8 @@ bot = telebot.TeleBot("")
 def send_welcome(message):
     bot.reply_to(message, 'Hello and Welcome!😊\n Send me a voice please!')
 
+
+
 @bot.message_handler(content_types = ['voice'])
 def voice_processing(message):
   myvoice = bot.get_file(message.voice.file_id)

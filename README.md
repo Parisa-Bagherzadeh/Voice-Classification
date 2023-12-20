@@ -35,5 +35,18 @@ Put your data in raw_data folder and  run the following command
 ```
 python preprocess.py --raw_data_path raw_data --min_silence_len YOUR_ARGUMENT --silence_thresh YOUR_ARGUMENT --chunk_duration YOUR_ARGUMENT   
 ```  
-The preprocessed data will be saved in dataset folder
+The preprocessed data will be saved in dataset folder.  
+### Train  
+To train the model on your own data, run Voice_Classification.ipynb notebook to get the weights.h5 file that will be saved in model folder  
+
+### Evaluation  
+To test the model run the following command:  
+```
+python inference.py
+```  
+## Contributing
+If you would like to contribute to this repository, feel free to submit a pull request with your changes. We welcome contributions from the community and are open to new ideas and improvements.
+
+
+
 
