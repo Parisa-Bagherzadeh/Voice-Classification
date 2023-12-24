@@ -7,11 +7,16 @@ import librosa
 
 from tensorflow.keras.models import load_model
 
+friends_model = load_model('model\weights.h5')
+singer_model = load_model('singer/weights/weights.h5')
+
 
 bot = telebot.TeleBot("")
 @bot.message_handler(commands = ['start'])
 def send_welcome(message):
     bot.reply_to(message, 'Hello and Welcome!😊\n Send me a voice please!')
+
+  
 
 
 
@@ -32,7 +37,7 @@ def voice_processing(message):
   input_data = np.expand_dims(resized_waveform, axis=-1)
   input_data = np.expand_dims(input_data, axis=0)
 
-  model = load_model('model\weights.h5')
+  model = friends_model
 
   prediction = model.predict(input_data)
 
@@ -69,7 +74,7 @@ def voice_processing(message):
       input_data = np.expand_dims(resized_waveform, axis=-1)
       input_data = np.expand_dims(input_data, axis=0)
 
-      model = load_model('singer/weights/weights.h5')
+      model = singer_model
 
       prediction = model.predict(input_data)
 
