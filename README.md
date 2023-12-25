@@ -45,7 +45,7 @@ To test the model run the following command:
 python inference.py --model .h5 file --wav_file Test_wav_file
 ```  
 ## Contributing
-If you would like to contribute to this repository, feel free to submit a pull request with your changes. We welcome contributions from the community and are open to new ideas and improvements.
+If you would like to contribute to this repository, feel free to submit a pull request with your changes. I welcome contributions from the community and are open to new ideas and improvements.
 
 
 
