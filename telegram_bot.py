@@ -7,7 +7,7 @@ import librosa
 
 from tensorflow.keras.models import load_model
 
-friends_model = load_model('model\weights.h5')
+friends_model = load_model('model/weights.h5')
 singer_model = load_model('singer/weights/weights.h5')
 
 
