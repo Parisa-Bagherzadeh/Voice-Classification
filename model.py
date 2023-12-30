@@ -155,31 +155,8 @@ class AudioClassifier():
 
 if __name__ == "__main__":
     
-    raw_data_path = "raw_data"
-    min_silence_len = 2000
-    silence_thresh = -45
-    chunk_duration = 1000
-
-    model = "model/weights.h5"
-    wav_file = "test_files/test.wav"
-
-    
     audioclassifier = AudioClassifier()
-
-    # parser = ArgumentParser()
-    # parser.add_argument("--raw_data_path", type = str, default = "raw_data", help = "set the path of raw data")
-    # parser.add_argument("--min_silence_len", type = int, default = 2000, help = "enter min silence len in milisecond")
-    # parser.add_argument("--silence_thresh" , type = int, default = -45, help = "enter the silence_thresh")
-    # parser.add_argument("--chunk_duration", type = int, default = 1000, help = "enter the chunk duration in milisecond")
-
-    # parser.add_argument("--model", type = str, default='model/weights.h5', help = "the path of .h5 file")
-    # parser.add_argument("--wav_file", type = str, default = "test_files/test.wav", help = "the path of wav file to inference")
-    
-    # args = parser.parse_args()
-    
-    audioclassifier.preprocss(raw_data_path, min_silence_len, silence_thresh, chunk_duration)
     audioclassifier.create_dataset()
     audioclassifier.create_model()
     audioclassifier.train()
     audioclassifier.evaluate()
-    audioclassifier.predict(model, wav_file)
